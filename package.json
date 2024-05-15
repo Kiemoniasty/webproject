@@ -6,6 +6,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.17",
+    "ls": "^0.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1"
@@ -35,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-next": "^14.2.3",
     "eslint-config-teacode": "^2.1.0"
   }
 }
