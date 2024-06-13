@@ -1,26 +1,38 @@
 import "./App.css";
-import Header from "./Header";
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
+import RecipeList from "./components/RecipeList";
 
-function App() {
+// function App() {
+//   const [recipes, setRecipes] = useState([]);
+//   console.log(recipes);
+
+//   return (
+//     <div className="App">
+//       <Navbar />
+//       <SearchBar onSearch={setRecipes} />
+//     </div>
+//   );
+// }
+
+const App = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  const searchRecipes = async (query) => {
+    const response = await fetch(
+      `https://api.edamam.com/search?q=${query}&app_id=29571d4a&app_key=63d060efa6a9df1a240486514bdeb7b2`,
+    );
+    setRecipes(response.data.hits);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <meta />
-        <Header />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <SearchBar onSearch={searchRecipes} />
+      <RecipeList recipes={recipes} />
     </div>
   );
-}
+};
 
 export default App;

@@ -4,10 +4,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
-export default function Header() {
+export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className="Header-appbar" position="static">
+      <AppBar className="Navbar-appbar" position="static">
         <Toolbar variant="dense">
           <Typography
             variant="h3"
