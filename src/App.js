@@ -3,6 +3,8 @@ import { Searchbar } from "./components/Searchbar.js";
 import Navbar from "./components/Navbar.js";
 import { useState } from "react";
 import { RecipesList } from "./components/RecipesList.js";
+import { theme } from "./themes/theme";
+import { ThemeProvider } from "@emotion/react";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -11,7 +13,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Searchbar setRecipes={setRecipes} />
-      <RecipesList recipes={recipes} />
+      <ThemeProvider theme={theme}>
+        <RecipesList recipes={recipes} />
+      </ThemeProvider>
     </div>
   );
 }
