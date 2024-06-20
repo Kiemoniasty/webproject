@@ -8,7 +8,7 @@ export const theme = createTheme({
       md: 900,
       lg: 1200,
       xl: 1536,
-      xxl: 1920, // Dodatkowy breakpoint dla bardzo dużych ekranów
+      xxl: 1920,
     },
   },
 });
