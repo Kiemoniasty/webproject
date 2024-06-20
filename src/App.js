@@ -12,10 +12,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Searchbar setRecipes={setRecipes} />
-      <ThemeProvider theme={theme}>
-        <RecipesList recipes={recipes} />
-      </ThemeProvider>
+      <div className="App-body">
+        <Searchbar setRecipes={setRecipes} />
+        <ThemeProvider theme={theme}>
+          <RecipesList recipes={recipes} />
+        </ThemeProvider>
+      </div>
     </div>
   );
 }

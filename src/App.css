@@ -7,10 +7,9 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-body {
+  padding: 20px;
+
 }
 
 .App-header {
@@ -47,11 +46,9 @@
 
 .Navbar-appbar {
   background-color: #3700f7;
-  background-image: linear-gradient(
-    45deg,
-    #3700f7 0%,
-    #bf14dc 46%,
-    #ff0809 83%
-  );
+  background-image: linear-gradient(45deg,
+      #3700f7 0%,
+      #bf14dc 46%,
+      #ff0809 83%);
   padding: 10px;
 }
